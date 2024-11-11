@@ -2,13 +2,15 @@ import React, { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import PointCloudRenderer from './PointCloudRenderer'; // Import PointCloudRenderer component
 import MainPointCloudRenderer from './MainPointCloud';
-
+import Spinner
+  from './Spinner';
 const DragAndDrop = () => {
   const [photos, setPhotos] = useState([]);
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [message, setMessage] = useState(null);
   const [glbPath, setGlbPath] = useState(null);
   const [filename, setFilename] = useState(null);
+  const [loading, setLoading] = useState(false); // Add loading state
 
   const onDrop = useCallback((acceptedFiles) => {
     const newFiles = acceptedFiles.map((file) =>
@@ -21,6 +23,7 @@ const DragAndDrop = () => {
 
 
   const handleButtonClick = async () => {
+    setLoading(true);
     const formData = new FormData();
     selectedFiles.forEach((file) => {
       formData.append('photos', file); // Append each file under the same 'photos' key
@@ -47,12 +50,14 @@ const DragAndDrop = () => {
         } else {
           setMessage("Failed to download GLB file");
         }
-      }  else {
+      } else {
         setMessage('Failed to upload photos');
       }
     } catch (error) {
       console.error('Error uploading photos:', error);
       setMessage('Error uploading photos');
+    } finally {
+      setLoading(false); // Set loading to false when fetch completes
     }
   };
 
@@ -144,6 +149,9 @@ const DragAndDrop = () => {
           <strong>Message:</strong> {message}
         </div>
       )} */}
+
+      {/* Show spinner only if loading */}
+      {loading && <Spinner />}
       {/* Render the PointCloudRenderer when glbPath is available */}
       {glbPath && (
         <div style={{ marginTop: '20px' }}>

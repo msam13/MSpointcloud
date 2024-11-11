@@ -20,7 +20,7 @@ function MainPointCloudRenderer({ glbPath, filename, title, description }) {
         const shareURL = `https://pointcloud.3-dready.com/model/${filename}`;
         navigator.clipboard.writeText(shareURL).then(() => {
             alert('URL copied to clipboard!');
-            alert(`GLB Path: ${glbPath}`);
+            // alert(`GLB Path: ${glbPath}`);
         }).catch((err) => {
             console.error('Failed to copy URL: ', err);
         });
