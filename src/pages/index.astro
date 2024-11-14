@@ -14,6 +14,9 @@ import Textstyle from '../components/textstyle.astro';
   <div id="upload" class="container"></div>
     <Textstyle title="Upload Your Images"/>
   </div>
+  <div class="upload-instructions" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;  margin-bottom: 20px">
+    <p>Multiple views are needed for triangulation - Upload at least 2 images</p>
+  </div>
   <DragAndDrop client:only="react" />
   <section class="my-64">
     <div id ="features" class="container">
@@ -21,38 +24,38 @@ import Textstyle from '../components/textstyle.astro';
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
         <PointCloudRenderer 
         glbPath="/models/scene1.glb"
-        title="Sample Point Cloud" 
-        description="This is a point cloud rendered from a GLB file."
+        title="Living Room" 
+        description="Size : 8.6 MB"
         client:only="react" 
       />
       <PointCloudRenderer 
       glbPath="/models/scene2.glb"
-      title="Sample Point Cloud" 
-      description="This is a point cloud rendered from a GLB file."
+      title="Living Room" 
+      description="Size : 8.2 MB"
       client:only="react" 
     />
     <PointCloudRenderer 
     glbPath="/models/scene3.glb"
-    title="Sample Point Cloud" 
-    description="This is a point cloud rendered from a GLB file."
+    title="Living Room" 
+    description="Size : 7.7 MB"
     client:only="react" 
   />
     <PointCloudRenderer 
     glbPath="/models/scene4.glb"
-    title="Sample Point Cloud" 
-    description="This is a point cloud rendered from a GLB file."
+    title="Personal Room" 
+    description="Size : 8.8 MB"
     client:only="react" 
   />
     <PointCloudRenderer 
     glbPath="/models/scene5.glb"
-    title="Sample Point Cloud" 
-    description="This is a point cloud rendered from a GLB file."
+    title="Living Room" 
+    description="Size : 8.0 MB"
     client:only="react" 
     />
     <PointCloudRenderer 
     glbPath="/models/scene6.glb"
-    title="Sample Point Cloud" 
-    description="This is a point cloud rendered from a GLB file."
+    title="Living Room" 
+    description="Size : 8.2 MB"
     client:only="react" 
     />
       </div>

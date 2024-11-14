@@ -140,7 +140,7 @@ const DragAndDrop = () => {
             cursor: 'pointer',
           }}
         >
-          Fetch Model
+          Get My Model
         </button>
       </div>
       {/* Display fetched message */}
