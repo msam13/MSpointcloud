@@ -1,0 +1,57 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title="About Us">
+  <section class="my-12 px-4">
+    <div class="flex flex-col lg:flex-row items-center justify-center gap-8">
+      
+      <!-- Left Side: Video -->
+      <div class="lg:w-1/2 w-full flex justify-center">
+        <video 
+          autoplay 
+          muted 
+          loop 
+          class="w-full lg:w-3/4 max-h-[600px] rounded-lg shadow-md" 
+          style="object-fit: cover;">
+          <source src="/foundersVideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Right Side: About Section -->
+      <div class="lg:w-1/2 w-full text-left lg:text-left">
+        <h1 class="text-gradient text-5xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+          About Us
+        </h1>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Hi there! We’re Samridha and Neharidha, lifelong friends who’ve known each other for 25 years. From classrooms to grad school, we’ve shared almost everything—even becoming roommates!
+          <br /><br />
+          Like many international students, we struggled with apartment hunting. Over two years, we moved three times, relying on photos and videos that didn’t capture the real vibe of a space. It was frustrating and stressful.
+          <br /><br />
+          That’s why we created <strong>3D-Ready</strong> and <strong>The Point Cloud</strong>. We wanted a better way to see apartments—clearly and in 3D—so no one has to guess what they’re signing up for.
+        </p>
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold mt-12 mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text text-center">
+      Why Choose 3D Models?
+    </h2>
+    <div class="bg-gray-50 border-l-4 border-accent p-6 rounded-lg mx-auto max-w-3xl">
+      <ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed">
+        <li><strong>Save space:</strong> 3D models are smaller than photos, making storage and sharing easier.</li>
+        <li><strong>Streamlined experience:</strong> No need to manage multiple images and videos of every room.</li>
+        <li><strong>Accurate visualization:</strong> See the apartment exactly as it is, with no surprises.</li>
+        <li><strong>Save time:</strong> Fewer video calls and in-person tours for landlords and tenants.</li>
+        <li><strong>Quick generation:</strong> Easily create 3D models with cutting-edge technology.</li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-lg text-gray-700 text-center">
+      With our tech, renting apartments is faster, smarter, and stress-free. Thank you for reading our story!
+    </p>
+    <p class="mt-4 font-semibold text-primary text-center">
+      Samridha & Neharidha
+    </p>
+  </section>
+</DefaultLayout>
