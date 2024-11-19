@@ -10,11 +10,29 @@ import Textstyle from '../components/textstyle.astro';
 
 <DefaultLayout title="PointCloud">
   <Hero />
+    <!-- YouTube Video Embed Section -->
+  <div id="video" class="container"></div>
+    <Textstyle title="How it works"/>
+  </div>
+    <div class="video-container" style="display: flex; justify-content: center; align-items: center; margin: 20px 0 60px;">
+      <iframe 
+        width="800" 
+        height="450" 
+        src="https://www.youtube.com/embed/qkPsr_t95EE?si=_xNgm1ProEzq0GFC" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    
+    
   <!-- Add the Drag and Drop Component Section Here -->
   <div id="upload" class="container"></div>
     <Textstyle title="Upload Your Images"/>
   </div>
-  <div class="upload-instructions" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;  margin-bottom: 20px">
+  <div class="upload-instructions" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;  margin-bottom: 10px">
     <p>Multiple views are needed for triangulation - Upload at least 2 images</p>
   </div>
   <DragAndDrop client:only="react" />
@@ -61,6 +79,13 @@ import Textstyle from '../components/textstyle.astro';
       </div>
     </div>
   </section>
+  <div class="bottom-text" style="text-align: center; margin-top: 40px; font-size: 1.2rem; line-height: 1.8;">
+    <p>
+      Want more than Point Cloud? Check out our High Fidelity Reconstructor
+      <a href="https://3d-ready.com" target="_blank" style="color: #007BFF; text-decoration: underline;">3D-Ready</a>
+    </p>
+  </div>
+  
   {/* <ContentMedia imgSrc="/accessible-components.webp">
     <h2>Compact 3D Models</h2>
     <p class="text-2xl">
